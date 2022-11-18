@@ -1,19 +1,30 @@
-# Getting Started
+# Список продуктов
 
-### Reference Documentation
-For further reference, please consider the following sections:
+### Сервис с использованием Spring Boot, MongoDB, Swagger.
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.7.5/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.7.5/maven-plugin/reference/html/#build-image)
-* [Spring Data MongoDB](https://docs.spring.io/spring-boot/docs/2.7.5/reference/htmlsingle/#data.nosql.mongodb)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.7.5/reference/htmlsingle/#web)
+Сервис содержит несколько API endpoint’ов. Формат запроса и ответа - json.
 
-### Guides
-The following guides illustrate how to use some features concretely:
+## Объекты
+### - Product
+* long : id
+* String : name
+* String : description
+* int : kcal
 
-* [Accessing Data with MongoDB](https://spring.io/guides/gs/accessing-data-mongodb/)
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
+### - List
+* long : id
+* String : name
 
+## Связи
+List может быть любое количество Product.
+
+### Сохранение
+По API доступно:
+* Product
+* List
+* добавлять Product в созданный List
+
+### Получение
+API должно давать возможность получать списки:
+* Product
+* List со всеми Product, которые относятся к данному List по id
