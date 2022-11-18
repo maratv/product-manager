@@ -33,9 +33,6 @@ public class ProductList {
     @ApiModelProperty(hidden = true)
     private Integer kCalSum;
 
-//    public ProductList(String name) {
-//        this.name = name;
-//    }
 
     public Long getId() {
         return id;
